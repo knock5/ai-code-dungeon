@@ -1,0 +1,267 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* === RPG Custom Colors === */
+  --color-dungeon-bg: var(--dungeon-bg);
+  --color-dungeon-surface: var(--dungeon-surface);
+  --color-dungeon-border: var(--dungeon-border);
+  --color-gold: var(--gold);
+  --color-gold-dim: var(--gold-dim);
+  --color-purple: var(--purple);
+  --color-purple-dim: var(--purple-dim);
+  --color-green-xp: var(--green-xp);
+  --color-red-hp: var(--red-hp);
+}
+
+:root {
+  --background: oklch(0.08 0.01 260);
+  --foreground: oklch(0.95 0.01 80);
+  --card: oklch(0.12 0.015 260);
+  --card-foreground: oklch(0.95 0.01 80);
+  --popover: oklch(0.12 0.015 260);
+  --popover-foreground: oklch(0.95 0.01 80);
+  --primary: oklch(0.78 0.18 75);
+  --primary-foreground: oklch(0.1 0 0);
+  --secondary: oklch(0.18 0.02 260);
+  --secondary-foreground: oklch(0.85 0.01 80);
+  --muted: oklch(0.18 0.02 260);
+  --muted-foreground: oklch(0.55 0.01 260);
+  --accent: oklch(0.62 0.22 295);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.62 0.22 20);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.78 0.18 75);
+  --chart-1: oklch(0.78 0.18 75);
+  --chart-2: oklch(0.62 0.22 295);
+  --chart-3: oklch(0.62 0.22 140);
+  --chart-4: oklch(0.62 0.22 20);
+  --chart-5: oklch(0.55 0.01 260);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.1 0.012 260);
+  --sidebar-foreground: oklch(0.95 0.01 80);
+  --sidebar-primary: oklch(0.78 0.18 75);
+  --sidebar-primary-foreground: oklch(0.1 0 0);
+  --sidebar-accent: oklch(0.18 0.02 260);
+  --sidebar-accent-foreground: oklch(0.85 0.01 80);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.78 0.18 75);
+
+  /* RPG Theme Vars */
+  --dungeon-bg: oklch(0.06 0.01 260);
+  --dungeon-surface: oklch(0.12 0.015 260);
+  --dungeon-border: oklch(0.78 0.18 75 / 20%);
+  --gold: oklch(0.82 0.18 80);
+  --gold-dim: oklch(0.55 0.12 80);
+  --purple: oklch(0.62 0.22 295);
+  --purple-dim: oklch(0.35 0.12 295);
+  --green-xp: oklch(0.62 0.22 140);
+  --red-hp: oklch(0.62 0.22 20);
+}
+
+.dark {
+  --background: oklch(0.08 0.01 260);
+  --foreground: oklch(0.95 0.01 80);
+  --card: oklch(0.12 0.015 260);
+  --card-foreground: oklch(0.95 0.01 80);
+  --popover: oklch(0.12 0.015 260);
+  --popover-foreground: oklch(0.95 0.01 80);
+  --primary: oklch(0.78 0.18 75);
+  --primary-foreground: oklch(0.1 0 0);
+  --secondary: oklch(0.18 0.02 260);
+  --secondary-foreground: oklch(0.85 0.01 80);
+  --muted: oklch(0.18 0.02 260);
+  --muted-foreground: oklch(0.55 0.01 260);
+  --accent: oklch(0.62 0.22 295);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.62 0.22 20);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.78 0.18 75);
+  --sidebar: oklch(0.1 0.012 260);
+  --sidebar-foreground: oklch(0.95 0.01 80);
+  --sidebar-primary: oklch(0.78 0.18 75);
+  --sidebar-primary-foreground: oklch(0.1 0 0);
+  --sidebar-accent: oklch(0.18 0.02 260);
+  --sidebar-accent-foreground: oklch(0.85 0.01 80);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.78 0.18 75);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* === RPG Utilities === */
+@layer utilities {
+  .text-gold {
+    color: var(--gold);
+  }
+  .text-gold-dim {
+    color: var(--gold-dim);
+  }
+  .bg-dungeon {
+    background-color: var(--dungeon-bg);
+  }
+  .bg-dungeon-surface {
+    background-color: var(--dungeon-surface);
+  }
+  .border-dungeon {
+    border-color: var(--dungeon-border);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .border-gold\/30 {
+    border-color: oklch(0.82 0.18 80 / 30%);
+  }
+
+  /* Scanline overlay untuk efek retro */
+  .scanlines {
+    position: relative;
+  }
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      oklch(0 0 0 / 4%) 2px,
+      oklch(0 0 0 / 4%) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Gold glow text */
+  .glow-gold {
+    text-shadow:
+      0 0 10px oklch(0.82 0.18 80 / 60%),
+      0 0 30px oklch(0.82 0.18 80 / 30%);
+  }
+
+  /* Purple glow */
+  .glow-purple {
+    text-shadow:
+      0 0 10px oklch(0.62 0.22 295 / 60%),
+      0 0 30px oklch(0.62 0.22 295 / 30%);
+  }
+
+  /* Pixel border style */
+  .border-pixel {
+    border: 2px solid;
+    border-image: linear-gradient(
+      135deg,
+      oklch(0.82 0.18 80),
+      oklch(0.62 0.22 295)
+    ) 1;
+  }
+
+  /* Dungeon card */
+  .card-dungeon {
+    background: oklch(0.12 0.015 260);
+    border: 1px solid oklch(0.82 0.18 80 / 20%);
+    border-radius: 0.5rem;
+  }
+  .card-dungeon:hover {
+    border-color: oklch(0.82 0.18 80 / 50%);
+    box-shadow: 0 0 20px oklch(0.82 0.18 80 / 10%);
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+@keyframes xp-fly {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-40px) scale(1.4); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-pulse-gold {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+.animate-xp-fly {
+  animation: xp-fly 1s ease-out forwards;
+}
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    oklch(0.82 0.18 80),
+    oklch(0.95 0.05 80),
+    oklch(0.62 0.22 295),
+    oklch(0.82 0.18 80)
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
