@@ -184,7 +184,7 @@ Project ini menggunakan **EdgeOne AI Gateway** sebagai proxy antara aplikasi dan
 - 🔄 **Model Fallback** — Otomatis beralih ke model lain jika ada error
 
 **Setup AI Gateway:**
-1. Buka [Tencent Cloud Console](https://console.cloud.tencent.com/teo)
+1. Buka [Tencent Cloud Console](https://console.cloud.tencent.com)
 2. Edge Developer Platform → AI Gateway
 3. Buat Gateway instance
 4. Tambahkan AI Model (OpenAI, DeepSeek, Anthropic, dll)
@@ -200,7 +200,7 @@ MIT License — bebas digunakan dan dimodifikasi.
 
 <div align="center">
 
-**Dibuat dengan ❤️ untuk CODEPOLITAN × Tencent EdgeOne Hackathon**
+**Dibuat dengan ❤️ untuk CODEPOLITAN x Tencent EdgeOne**
 
 [EdgeOne Pages](https://pages.edgeone.ai) · [Next.js](https://nextjs.org) · [Framer Motion](https://www.framer.com/motion/)
 
